@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+while read userinput
+
+do
+
+
+
+name=$(echo $userinput | cut -d ":" -f1);
+
+
+echo "UserID: $name"
+
+
+done <passwd1.txt
+
+
+exit 0
