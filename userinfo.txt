@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo -n "Enter a UserID: "
+read userinput
+name=(grep ^$userinput ./passwd1.txt | cut -d ":" -f1)
+uid=$(grep ^$userinput ./passwd1.txt | cut -d ":" -f3);
+
+gid=$(grep ^$userinput ./passwd1.txt | cut -d ":" -f4);
+
+home=$(grep ^$userinput ./passwd1.txt | cut -d ":" -f6);
+
+shell=$(grep ^$userinput ./passwd1.txt | cut -d ":" -f7); 
+
+
+echo "UserID: $name"
+
+echo "UID: $uid"
+
+echo "GID: $gid"
+
+echo "Home Directory: $home"
+
+echo "Shell: $shell"
+
+
+
+
+exit 0
